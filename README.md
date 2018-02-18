@@ -14,6 +14,7 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 If you already have Profit Trailer running on the same machine you can ignore this.
+
 Make sure you have Java 8 (1.8.0_131 and up) installed on your computer. (Java 9 will not work)
 Windows & Linux require Java 8 JRE - [Download](https://www.java.com/en/download/)
 Mac OSX requires Java 8 JDK - [Download](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.htm)
