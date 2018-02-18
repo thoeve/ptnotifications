@@ -62,6 +62,6 @@ java -jar ptnotifications.jar -XX:+UseG1GC -XX:+UseStringDeduplication -XX:Strin
 
 ## Support
 Join our Discord or Telegram for support:
-[Telegram](https://t.me/ptnotifications)
+[Telegram](https://t.me/pt_notifications)
 [Discord](https://discord.gg/6KEz6aN)
 
