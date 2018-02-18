@@ -27,7 +27,7 @@ Get your license on [ptnotifications.com](https://ptnotifications.com)
 
 Download the latest version from the releases page.
 
-Update the PT Notifications settings:
+###### Update the PT Notifications settings
 ```
 License_key = YOUR LICENSE KEY
 
