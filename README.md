@@ -31,8 +31,16 @@ Download the latest version from the releases page.
 ```
 License_key = YOUR LICENSE KEY
 
-ProfitTrailer_Address = YOUR PROFIT TRAILER ADDRESS e.g 172.456.231.12:8081
-ProfitTrailer_Password = YOUR PROFIT TRAILER PASSWORD
+#Amount of PT instances you have running
+#Make sure to give your Profit Trailer sites unique names so you can distinguish them
+ProfitTrailer_Instances = 1
+ProfitTrailer_Address_1 = YOUR PROFIT TRAILER ADDRESS e.g http://172.456.231.12:8081
+ProfitTrailer_Password_1 = YOUR PROFIT TRAILER PASSWORD
+
+###Second instance example:
+#ProfitTrailer_Address_2 = YOUR PROFIT TRAILER ADDRESS e.g http://172.456.231.12:8081
+#ProfitTrailer_Password_2 = YOUR PROFIT TRAILER PASSWORD
+
 timeZoneOffset = +1
 
 Telegram_enabled = TRUE/FALSE
@@ -44,20 +52,23 @@ Discord_bot_token = YOUR DISCORD BOT TOKEN
 Discord_channel_id = YOUR DISCORD CHANNEL ID
 
 som_notifications = TRUE/FALSE
+error_notifications = TRUE/FALSE
 ```
 
 ###### Getting PT Notifications to run
 
 Windows
 ```
-Simply run the Start.cmd file in the zip.
+Simply run the Start_windows.cmd file in the zip.
 ```
 macOS & Linux
 ```
+Simply run the Start_linux.sh file in the zip.
+Or
 Open terminal > navigate to the folder containing the .jar.
 
 Run the jar using:
-java -jar ptnotifications.jar -XX:+UseG1GC -XX:+UseStringDeduplication -XX:StringDeduplicationAgeThreshold=1
+java -jar ptnotifications.jar -XX:+UseG1GC -XX:+UseStringDeduplication -XX:StringDeduplicationAgeThreshold=1 -Xmx64m
 ```
 
 ## Support
