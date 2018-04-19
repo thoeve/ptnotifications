@@ -7,7 +7,7 @@ The solution to tracking your daily Profit Trailer profit on the go.
 
 ## Features and commands
 
-[PT Nofications video](https://www.youtube.com/watch?v=IAkIHYvsrAo)
+[PT Notifications video](https://www.youtube.com/watch?v=IAkIHYvsrAo)
 
 
 #### Features
