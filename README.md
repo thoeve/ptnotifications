@@ -1,9 +1,42 @@
+
 # PT Notifications
+<img src="https://i.imgur.com/6q1wcy0.png" width="200">
 
-The solutions to tracking your daily Profit Trailer profit.
-Website: [ptnotifications.com](https://ptnotifications.com)
+A official Profit Trailer addon.  
+The solution to tracking your daily Profit Trailer profit on the go.
 
-![N|Solid](https://ptnotifications.com/img/feature-mobile.png)
+## Features and commands
+
+[PT Nofications video](https://www.youtube.com/watch?v=IAkIHYvsrAo)
+
+
+#### Features
+- PT Notifications has support for both Discord and Telegram.
+- Runs on Windows, Linux and macOS.
+- Sends detailed buy and sell notifications. Including DCA, profit in dollars and more
+- Sends update notifications when there is a new Profit Trailer release.
+- Sends Sell Only Mode notifications
+- Sends notifications when Profit Trailer runs into a error.
+
+#### Commands
+- [/update] Sends list of options
+	- [/today] List of today's statistics including profit, balance and more.
+	- [/yesterday] List of yesterday's statistics including profit, balance and more.
+	- [/dca] List of DCA
+	- [/pairs] List of pairs
+	- [/last] Last 5 sales
+	- [/all] Contents of /dca, /today and /pairs
+
+- [/settings] Sends list of options
+	- [/enable_som] Enables Sell Only Mode
+	- [/disable_som] Disable Sell Only mode
+	- [/blacklist] Adds given coin to _trading_enabled = false
+	- [/whitelist] Adds given coin to enabled_pairs = list
+
+- [/version] Sends version numbers of running instances and whether there is a update available.
+- [/alive] Responds when PT Notifications is up and running.
+- [/help] List of available commands.
+
 
 ## Getting Started
 
@@ -21,38 +54,50 @@ Mac OSX requires Java 8 JDK - [Download](http://www.oracle.com/technetwork/java/
 
 ### License
 
-Get your license on [ptnotifications.com](https://ptnotifications.com)
+To run PT Notifications you need to have a valid Profit Trailer PRO license.
 
 ### Installing
 
 Download the latest version from the releases page.
 
+###### Prepare your Profit Trailer instances
+- Give every Profit Trailer instance you run a unique ```server.sitename``` in the ```application.properties``` file. This is so it's easier to recognize your bots easier when receiving notifications.
+- Make sure to set the ```server.api_token``` variable in the ```application.properties``` file for each instance as well. This value can be any random arrangement of characters. This is needed so the addon can request access to the trade data.
+
+
 ###### Update the PT Notifications settings
 ```
-License_key = YOUR LICENSE KEY
-
 #Amount of PT instances you have running
-#Make sure to give your Profit Trailer sites unique names so you can distinguish them
-ProfitTrailer_Instances = 1
-ProfitTrailer_Address_1 = YOUR PROFIT TRAILER ADDRESS e.g http://172.456.231.12:8081
-ProfitTrailer_Password_1 = YOUR PROFIT TRAILER PASSWORD
+profitTrailer_instances = 1
 
-###Second instance example:
-#ProfitTrailer_Address_2 = YOUR PROFIT TRAILER ADDRESS e.g http://172.456.231.12:8081
-#ProfitTrailer_Password_2 = YOUR PROFIT TRAILER PASSWORD
+profitTrailer_address_1 = 
+profitTrailer_license_key_1 = 
+#Make sure it matches the server.api_token variable in application.properties of your PT instance
+profitTrailer_instance_api_token_1 = 
 
-timeZoneOffset = +1
+#Example
+#profitTrailer_address_2 = http://localhost:8082
+#profitTrailer_license_key_2 = 1234567abcd8910
+#profitTrailer_instance_api_token_2 = bot_api_token
 
-Telegram_enabled = TRUE/FALSE
-Telegram_bot_token = YOUR TELEGRAM BOT TOKEN
-Telegram_channel_id = YOUR TELEGRAM CHAT ID
+#Enable or disable Telegram notifications
+telegram_enabled = true/false
+telegram_bot_token = 
+telegram_channel_id = 
 
-Discord_enabled = TRUE/FALSE
-Discord_bot_token = YOUR DISCORD BOT TOKEN
-Discord_channel_id = YOUR DISCORD CHANNEL ID
+#Enable or disable Discord notifications
+discord_enabled = true/false
+discord_bot_token = 
+discord_channel_id = 
 
-som_notifications = TRUE/FALSE
-error_notifications = TRUE/FALSE
+#Enable or disable Sell Only Mode notifications
+som_notifications = true
+#Enable or disable Profit Trailer error notifications
+error_notifications = true
+#Enable or disable update notifications
+update_notifications = true
+#Add error messages that need to be ignored seperated by a comma i.e. SomeKindOfExchangeError,AnotherExchangeError
+error_filter = BinanceWebSocketAdapterKline,APIKEY_INVALID
 ```
 
 ###### Getting PT Notifications to run
@@ -70,9 +115,3 @@ Open terminal > navigate to the folder containing the .jar.
 Run the jar using:
 java -jar ptnotifications.jar -XX:+UseG1GC -XX:+UseStringDeduplication -XX:StringDeduplicationAgeThreshold=1 -Xmx64m
 ```
-
-## Support
-Join our Discord or Telegram for support:
-[Telegram](https://t.me/pt_notifications)
-[Discord](https://discord.gg/6KEz6aN)
-
