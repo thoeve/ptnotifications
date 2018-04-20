@@ -2,8 +2,8 @@
 # PT Notifications
 <img src="https://i.imgur.com/6q1wcy0.png" width="200">
 
-A official Profit Trailer addon.  
-The solution to tracking your daily Profit Trailer profit on the go.
+A official ProfitTrailer addon.  
+The solution to tracking your daily ProfitTrailer profit on the go.
 
 ## Features and commands
 
@@ -14,9 +14,9 @@ The solution to tracking your daily Profit Trailer profit on the go.
 - PT Notifications has support for both Discord and Telegram.
 - Runs on Windows, Linux and macOS.
 - Sends detailed buy and sell notifications. Including DCA, profit in dollars and more
-- Sends update notifications when there is a new Profit Trailer release.
+- Sends update notifications when there is a new ProfitTrailer release.
 - Sends Sell Only Mode notifications
-- Sends notifications when Profit Trailer runs into a error.
+- Sends notifications when ProfitTrailer runs into a error.
 
 #### Commands
 - [/update] Sends list of options
@@ -46,7 +46,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 What things you need to install the software and how to install them
 
-If you already have Profit Trailer running on the same machine you can ignore this.
+If you already have ProfitTrailer running on the same machine you can ignore this.
 
 Make sure you have Java 8 (1.8.0_131 and up) installed on your computer. (Java 9 will not work).  
 Windows & Linux require Java 8 JRE - [Download](https://www.java.com/en/download/).  
@@ -54,14 +54,32 @@ Mac OSX requires Java 8 JDK - [Download](http://www.oracle.com/technetwork/java/
 
 ### License
 
-To run PT Notifications you need to have a valid Profit Trailer PRO license.
+To run PT Notifications you need to have a valid ProfitTrailer PRO license.
+
+### Creating bots
+#### Telegram
+-	In Telegram, send a private message to @BotFather (NOT to be confused with TheBotFather ​channel)
+-	Once there type “/​newbot” ​to create a bot. Answer the questions ​by typing answers and pressing enter.
+You will receive a message ​containing your bot token.
+-	Start a chat with your bot's name (for example ​@MyTPBot) and press start button ​
+-	Start another ​chat with [https://t.me/MyTelegramID_bot.]([https://t.me/MyTelegramID_bot)
+-	If that doesn't work, try a chat with [https://​telegram.me/​id_chatbot.](https://​telegram.me/​id_chatbot)
+or paste @id_chatbot into a telegram chat and click it. It should open the chat id bot in a new chat.
+or send a message to: @userinfobot with content: /start
+-	Finally, here is a link to a page [https://ebotstore.de/bot/mytelegramidbot-telegram](https://ebotstore.de/bot/mytelegramidbot-telegram) with a couple more ID chatbots for telegram that you can click if the above doesn't get a valid response.
+
+#### Discord
+- In Discord, create your own server by clicking the + button in the server menu on the left. Discord published their own guide [HERE!](https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token)
+- Create a text channel by right clicking on your server icon and selecting “Create Channel”.
+-	Create a discord bot. There is a great guide HERE!
+-	Add the bot to your server
 
 ### Installing
 
 Download the latest version from the releases page.
 
-###### Prepare your Profit Trailer instances
-- Give every Profit Trailer instance you run a unique ```server.sitename``` in the ```application.properties``` file. This is so it's easier to recognize your bots easier when receiving notifications.
+###### Prepare your ProfitTrailer instances
+- Give every ProfitTrailer instance you run a unique ```server.sitename``` in the ```application.properties``` file. This is so it's easier to recognize your bots easier when receiving notifications.
 - Make sure to set the ```server.api_token``` variable in the ```application.properties``` file for each instance as well. This value can be any random arrangement of characters. This is needed so the addon can request access to the trade data.
 
 
@@ -92,7 +110,7 @@ discord_channel_id =
 
 #Enable or disable Sell Only Mode notifications
 som_notifications = true
-#Enable or disable Profit Trailer error notifications
+#Enable or disable ProfitTrailer error notifications
 error_notifications = true
 #Enable or disable update notifications
 update_notifications = true
@@ -113,5 +131,5 @@ Or
 Open terminal > navigate to the folder containing the .jar.
 
 Run the jar using:
-java -jar ptnotifications.jar -XX:+UseG1GC -XX:+UseStringDeduplication -XX:StringDeduplicationAgeThreshold=1 -Xmx64m
+java -jar PTNotifications.jar -XX:+UseG1GC -XX:+UseStringDeduplication -XX:StringDeduplicationAgeThreshold=1 -Xmx128m
 ```
