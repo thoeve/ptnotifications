@@ -78,9 +78,13 @@ or send a message to: @userinfobot with content: /start
 
 Download the latest version from the releases page.
 
+#### Quick notes to success
+- leave "profitTrailer_instance_api_token_1 =" in here blank and leave "server.api_token =" blanks in PT
+- to get the "discord_channel_id =" please go to Discord settings > appearence > developer mode on then right click on the channel you want the bot in and click Copy ID - this will be a number please use this and not the channel name or it will say bot token error
+
 ###### Prepare your ProfitTrailer instances
 - Give every ProfitTrailer instance you run a unique ```server.sitename``` in the ```application.properties``` file. This is so it's easier to recognize your bots easier when receiving notifications.
-- Make sure to set the ```server.api_token``` variable in the ```application.properties``` file for each instance as well. This value can be any random arrangement of characters. This is needed so the addon can request access to the trade data.
+- Read note above ~~Make sure to set the ```server.api_token``` variable in the ```application.properties``` file for each instance as well. This value can be any random arrangement of characters. This is needed so the addon can request access to the trade data.~~
 
 
 ###### Update the PT Notifications settings
