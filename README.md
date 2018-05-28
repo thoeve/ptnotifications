@@ -96,11 +96,15 @@ profitTrailer_address_1 =
 profitTrailer_license_key_1 = 
 #Make sure it matches the server.api_token variable in application.properties of your PT instance
 profitTrailer_instance_api_token_1 = 
+#telegram_channel_id_1 = 
+#discord_channel_id_1 =
 
 #Example
 #profitTrailer_address_2 = http://localhost:8082
 #profitTrailer_license_key_2 = 1234567abcd8910
 #profitTrailer_instance_api_token_2 = bot_api_token
+#telegram_channel_id_2 = 
+#discord_channel_id_2 =
 
 #Enable or disable Telegram notifications
 telegram_enabled = true/false
@@ -112,12 +116,20 @@ discord_enabled = true/false
 discord_bot_token = 
 discord_channel_id = 
 
+#Enable or disable Telegram silent notifications (no sound)
+silent_notifications = false
+#Enable or disable Sell notifications
+sell_notifications = true
+#Enable or disable Buy notifications
+buy_notifications = true
 #Enable or disable Sell Only Mode notifications
 som_notifications = true
-#Enable or disable ProfitTrailer error notifications
+#Enable or disable Profit Trailer error notifications
 error_notifications = true
-#Enable or disable update notifications
+#Enable or disable release/update notifications
 update_notifications = true
+#Enable or disable access to settings
+enable_settings = true
 #Add error messages that need to be ignored seperated by a comma i.e. SomeKindOfExchangeError,AnotherExchangeError
 error_filter = BinanceWebSocketAdapterKline,APIKEY_INVALID
 ```
