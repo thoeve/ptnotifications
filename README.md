@@ -71,7 +71,7 @@ or send a message to: @userinfobot with content: /start
 #### Discord
 - In Discord, create your own server by clicking the + button in the server menu on the left. Discord published their own guide [HERE!](https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token)
 - Create a text channel by right clicking on your server icon and selecting “Create Channel”.
--	Create a discord bot. There is a great guide HERE!
+-	Create a discord bot. There is a great guide [HERE!](https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token)
 -	Add the bot to your server
 
 ### Installing
@@ -132,7 +132,59 @@ update_notifications = true
 enable_settings = true
 #Add error messages that need to be ignored seperated by a comma i.e. SomeKindOfExchangeError,AnotherExchangeError
 error_filter = BinanceWebSocketAdapterKline,APIKEY_INVALID
+
+#Custom buy messages
+#Available variables: dcaCount, instanceName, quantity, rate, avgCost, total, percentage		
+discord_buy_message_format = <b>Bought {market} </b> ({dcaCount}),\
+				            ```ml\nInstance:   {instanceName},\
+				            Quantity:   {quantity},\
+				            Rate:       {rate},\
+				            Avg cost:   {avgCost},\
+				            Total:      {total} ({dcaCount}),\
+				            Profit:     {percentage}```
+
+telegram_buy_message_format = <b>Bought {market} </b> ({dcaCount}),\
+				            Instance: {instanceName},\
+				            Quantity: {quantity},\
+				            Rate: {rate},\
+				            Avg cost: {avgCost},\
+				            Total: {total} ({dcaCount}),\
+				            Profit: {percentage}
+
+#Custom sell messages
+#Available variables: dcaCount, instanceName, strategies, quantity, rate, total, profit, dollar, boughtDate, percentage			            
+discord_sell_message_format = <b>Sold {market} </b> ({dcaCount}),\
+				            ```ml\nInstance:   {instanceName},\
+				            Strategies: {strategies},\
+				            Quantity:   {quantity},\
+				            Rate:       {rate},\
+				            Avg cost:   {avgCost},\
+				            Total:      {total} ({dcaCount}),\
+				            Profit:     {profit} ({dollar}),\
+				            Bought on:  {boughtDate},\
+				            Percentage: {percentage}```
+
+telegram_sell_message_format = <b>Sold {market} </b> ({dcaCount}),\
+				            Instance: {instanceName},\
+				            Strategies: {strategies},\
+				            Quantity: {quantity},\
+				            Rate: {rate},\
+				            Avg cost: {avgCost},\
+				            Total: {total} ({dcaCount}),\
+				            Profit: {profit} ({dollar}),\
+				            Bought on: {boughtDate},\
+				            Percentage: {percentage}
 ```
+
+###### Modify buy and sell notifications format
+Version `1.2.0` supports the modification of the buy and sell notifications. This can be done by changing the `sell_message_format` and `buy_message_format` variables in settings.properties. 
+
+The included examples use all of the currently available variables. These variables can be used by including the name of the variable between two brackets as followed `{profit}`. Besides those variables all other format options supported by the chat client can be included. This for example goes for Emoticons and Discord/Telegram text formatting, more info on text formatting can be found here:
+
+[Telegram text formatting](https://sourceforge.net/p/telegram/wiki/markdown_syntax/)
+[Discord text formatting](https://support.discordapp.com/hc/en-us/articles/210298617-Markdown-Text-101-Chat-Formatting-Bold-Italic-Underline-)
+
+Please avoid using `$` and `\` characters as that will break the custom format.
 
 ###### Getting PT Notifications to run
 
