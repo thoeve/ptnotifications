@@ -177,9 +177,11 @@ telegram_sell_message_format = <b>Sold {market} </b> ({dcaCount}),\
 ```
 
 ###### Modify buy and sell notifications format
-Version `1.2.0` supports the modification of the buy and sell notifications. This can be done by changing the `sell_message_format` and `buy_message_format` variables in settings.properties. 
+Version `1.2.0` supports the modification of the buy and sell notifications. This can be done by changing the `sell_message_format` and `buy_message_format` variables in `settings.properties`. 
 
-The included examples use all of the currently available variables. These variables can be used by including the name of the variable between two brackets as followed `{profit}`. Besides those variables all other format options supported by the chat client can be included. This for example goes for Emoticons and Discord/Telegram text formatting, more info on text formatting can be found here:
+The included examples use all of the currently available variables. These variables can be used by including the name of the variable between two brackets as followed `{profit}`. When creating your own custom message format make sure to end every line in `settings.properties` with `,\` to indicate the end of a line.
+
+Besides those variables all other format options supported by the chat client can be included. This for example goes for Emoticons and Discord/Telegram text formatting, more info on text formatting can be found here:
 
 [Telegram text formatting](https://sourceforge.net/p/telegram/wiki/markdown_syntax/)
 [Discord text formatting](https://support.discordapp.com/hc/en-us/articles/210298617-Markdown-Text-101-Chat-Formatting-Bold-Italic-Underline-)
